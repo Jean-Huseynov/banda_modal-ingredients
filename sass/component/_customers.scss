@@ -1,0 +1,112 @@
+// Постійні клієнти Regular customers
+.customers {
+  padding: 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.customers {
+  width: 480px;
+  padding: 0 15px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1600px;
+    padding: 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.customers__title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @extend %Main-page__title;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+// /* логотип постійні клієнти */
+
+/* ul */
+.customers__icon-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 30px;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    grid-column-gap: 30px;
+  }
+}
+
+// /* li */
+.services__link {
+  display: flex;
+
+  width: 210px;
+  height: 92px;
+
+  margin: 0px;
+  border-radius: 4px;
+  justify-content: center;
+
+  border: 1px solid #afb1b8;
+
+  transition-property: border;
+  @extend %animation;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #2196f3;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+}
+
+// /* a */
+.services__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// /* svg */
+.customers__icon {
+  display: flex;
+  fill: #afb1b8;
+
+  transition-property: fill;
+  @extend %animation;
+
+  .services__link:hover &,
+  .services__link:focus & {
+    fill: #2196f3;
+  }
+}

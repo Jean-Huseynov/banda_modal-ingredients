@@ -1,0 +1,225 @@
+// HEADER
+.container {
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container container {
+  display: flex;
+}
+
+// SITE-NAV
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+// site-nav__fover
+.site-nav__fover {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  margin-left: 50px;
+
+  // transition-property: background;
+  // @extend %animation;
+
+  &:first-child {
+    margin-left: 88px;
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 93px;
+    }
+  }
+}
+
+// Site-nav
+.site-nav__link {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @extend %site-nav__link;
+
+  color: $color-title;
+
+  transition-property: color, cursor;
+  @extend %animation;
+
+  &:hover,
+  &:focus {
+    color: $color-hover-focus;
+    cursor: pointer;
+  }
+}
+
+.site-nav__fover:hover .site-nav__link,
+.site-nav__fover:focus .site-nav__link {
+  color: $color-hover-focus;
+  cursor: pointer;
+}
+
+// fover
+.site-nav__link::before {
+  position: absolute;
+
+  margin: 0;
+  padding: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  top: 76px;
+
+  background: rgba(33, 150, 243, 0);
+  border-radius: 2px;
+}
+
+.site-nav__link::after {
+  position: absolute;
+
+  margin: 0;
+  padding: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  top: 76px;
+
+  border-radius: 2px;
+
+  transition-property: background, cursor;
+  @extend %animation;
+}
+
+.site-nav__link:hover::after,
+.site-nav__link:focus::after {
+  background: $color-hover-focus;
+  cursor: pointer;
+}
+
+// AUTH-NAV
+.auth-nav {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: 96px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 30px;
+    margin-left: 305px;
+  }
+}
+
+// tel
+.auth-nav__link {
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  align-items: center;
+  @extend %auth-nav__link;
+
+  color: $color-text;
+
+  transition-property: color, cursor;
+  @extend %animation;
+
+  &:hover,
+  &:focus {
+    color: $color-hover-focus;
+    cursor: pointer;
+  }
+}
+
+// mailto
+.auth-nav__mailto {
+  display: flex;
+}
+
+.auth-nav__icon-mailto {
+  display: flex;
+  margin: 0px 10px 0px 0px;
+  padding: 0px 0px 0px 0px;
+
+  fill: #afb1b8;
+
+  transition-property: fill, cursor;
+  @extend %animation;
+
+  &:hover,
+  &:focus {
+    fill: $color-hover-focus;
+    cursor: pointer;
+  }
+}
+
+.auth-nav__link:hover .auth-nav__icon-mailto,
+.auth-nav__link:focus .auth-nav__icon-mailto {
+  fill: $color-hover-focus;
+  cursor: pointer;
+}
+
+.auth-nav__block {
+  display: flex;
+  margin: 0px;
+
+  transition-property: fill, cursor;
+  @extend %animation;
+}
+
+/* tel */
+.auth-nav__tel {
+  display: flex;
+}
+
+.auth-nav__icon-tel {
+  display: flex;
+  margin: 0px 10px 0px 0px;
+  padding: 0;
+
+  fill: #afb1b8;
+
+  transition-property: fill, cursor;
+  @extend %animation;
+
+  &:hover,
+  &:focus {
+    fill: $color-hover-focus;
+    cursor: pointer;
+  }
+}
+.auth-nav__link:hover .auth-nav__icon-tel,
+.auth-nav__link:focus .auth-nav__icon-tel {
+  fill: $color-hover-focus;
+  cursor: pointer;
+}
+
+.auth-nav__block {
+  display: flex;
+  margin: 0px;
+
+  transition-property: fill, cursor;
+  @extend %animation;
+}
