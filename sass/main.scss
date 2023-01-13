@@ -1,15 +1,6 @@
 @import "./utils/variables";
-@import "./component/logo";
-@import "./component/page-header";
-@import "./component/mobile-menu";
-@import "./component/hero";
-@import "./component/benefits";
-@import "./component/services";
-@import "./component/team";
-@import "./component/customers";
-@import "./component/footer";
+@import "./component/about__button";
 @import "./component/modal";
-@import "./component/portfolio";
 
 *,
 *::before,
@@ -20,8 +11,6 @@
 body {
   font-family: Roboto, sans-serif;
   font-style: normal;
-  color: $color-title;
-  background: $color-accent;
 }
 
 ul {
@@ -31,16 +20,6 @@ ul {
   margin: 0px;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 blackout body .blackout {
   position: relative;
 }
-
-// body.responsive {
-//   max-width: 480px;
-// }
