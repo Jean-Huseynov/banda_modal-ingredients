@@ -1,5 +1,5 @@
 // /* MODAL */
-.backdrop {
+.read__more-backdrop {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -17,7 +17,7 @@
   overflow-y: scroll;
 }
 
-.backdrop.is-hidden {
+.read__more-backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -59,12 +59,14 @@
 
   border-radius: 50%;
 
-  transition-property: transition-duration, cursor;
+  transition-property: transition-duration, cursor, background, border;
   @extend %animation;
 
   &:hover,
   &:focus {
     transition-duration: 250ms;
+    background: none;
+    border: none;
     cursor: pointer;
   }
 }
